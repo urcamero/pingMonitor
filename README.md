@@ -1,0 +1,2 @@
+# pingMonitor
+Multiping Powershell script
