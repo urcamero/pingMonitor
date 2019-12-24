@@ -61,7 +61,7 @@ $targets | ForEach-Object {
     
     $recipients = @($_.Recipients.Split("|"))
     $aims = @($_.Hostname, $_.IP, $recipients, $mail)
-    Start-Job -ScriptBlock ${function:main} -ArgumentList $aims
+    Start-Job -name $_.Hostname -ScriptBlock ${function:main} -ArgumentList $aims
 
 }
 
